@@ -31,6 +31,7 @@ func p3(year int) bool{
 
 func main(){
 	
+	//速度計測
 	years := []int{}
 	for i:=0; i<100000000; i++{
 		years = append(years, i)
@@ -54,8 +55,17 @@ func main(){
 	for _, y := range years{
 		tmp = p3(y)
 	}	
-	_ = tmp
 	fmt.Println(time.Since(t).Seconds())
+	
+	_ = tmp
+
+	// 判定
+	year := 2000
+	if p2(year){
+		fmt.Println("うるう年です")
+	}else{
+		fmt.Println("うるう年じゃないです")
+	}
 
 }
 /*
